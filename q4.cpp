@@ -6,6 +6,8 @@ void Game::addItemToPlayer(const std::string &recipient, uint16_t itemId)
         player = new Player(nullptr);
         if (!IOLoginData::loadPlayerByName(player, recipient))
         {
+            // needs to delete the newly created player object before returning if the player cannot be loaded
+            delete player;
             return;
         }
     }
