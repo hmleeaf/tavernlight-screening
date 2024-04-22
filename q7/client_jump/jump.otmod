@@ -1,0 +1,9 @@
+Module
+  name: client_jump
+  description: A moving jump button
+  author: hmleeaf
+  website: 
+  sandboxed: true
+  scripts: [ jump ]
+  @onLoad: init()
+  @onUnload: terminate()
